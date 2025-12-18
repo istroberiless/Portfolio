@@ -28,6 +28,25 @@
   color: #61dafb;
 }
 
+/* Single line projects layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
