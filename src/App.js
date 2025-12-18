@@ -3,14 +3,6 @@ import './styles.css';
 import heroStyles from './components/Hero.module.css';
 import projectStyles from './components/Projects.module.css';
 import aboutStyles from './components/About.module.css';
-
-// Import images
-import logoImg from '../public/logo.png';
-import profileImg from '../public/profile.png';
-import campuseatsImg from '../public/campuseats.png';
-import bituinImg from '../public/bituin.png';
-import funImg from '../public/fun.png';
-import locationImg from '../public/location.png';
 import {
   Menu,
   X,
