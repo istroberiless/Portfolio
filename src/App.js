@@ -3,6 +3,14 @@ import './styles.css';
 import heroStyles from './components/Hero.module.css';
 import projectStyles from './components/Projects.module.css';
 import aboutStyles from './components/About.module.css';
+
+// Import all images from assets folder
+import profileImg from './assets/profile.png';
+import logoImg from './assets/logo.png';
+import campuseatsImg from './assets/campuseats.png';
+import bituinImg from './assets/bituin.png';
+import funImg from './assets/fun.png';
+import locationImg from './assets/location.png';
 import {
   Menu,
   X,
@@ -37,7 +45,7 @@ function App() {
       tech: ["React Native", "Node.js", "MongoDB", "Socket.io", "Firebase"],
       github: "https://github.com/Lraccc/campus_eats",
       live: "#",
-      image: `${process.env.PUBLIC_URL}/campuseats.png`,
+      image: campuseatsImg,
       type: "collaborative"
     },
     {
@@ -46,7 +54,7 @@ function App() {
       tech: ["React", "Node.js", "Tailwind CSS"],
       github: "https://github.com/ElReyDeLosGorditos/IT342-BituinDestinations",
       live: "#",
-      image: `${process.env.PUBLIC_URL}/bituin.png`,
+      image: bituinImg,
       type: "collaborative"
     },
     {
@@ -55,7 +63,7 @@ function App() {
       tech: ["Figma", "Creative Design", "Personal Project", "Artistic Expression"],
       github: "#",
       live: "https://www.figma.com/proto/ym07zHyvstXfZXbaMGeMNS/TTPD?node-id=3-2&p=f&t=04eWs0lGwvkp5DSa-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
-      image: `${process.env.PUBLIC_URL}/fun.png`,
+      image: funImg,
       type: "creative"
     },
     {
@@ -64,7 +72,7 @@ function App() {
       tech: ["Figma", "UX Research", "Prototype Design", "User Testing"],
       github: "#",
       live: "https://www.figma.com/proto/JllVgrUS42gfit94KRrj7e/HCI-Prototype?node-id=129-116&p=f&t=dlF6p2Zg6JumIJRb-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=129%3A116",
-      image: `${process.env.PUBLIC_URL}/location.png`,
+      image: locationImg,
       type: "collaborative"
     }
   ];
@@ -117,7 +125,7 @@ function App() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
               <img 
-                src={`${process.env.PUBLIC_URL}/logo.png`}
+                src={logoImg}
                 alt="KNI Logo" 
                 className="w-8 h-8 object-contain"
               />
@@ -220,7 +228,7 @@ function App() {
                 <div className={heroStyles.heroImageBackground}></div>
                 <div className={heroStyles.heroImageWrapper}>
                   <img 
-                    src={`${process.env.PUBLIC_URL}/profile.png`}
+                    src={profileImg}
                     alt="Kyle Niña" 
                     className={heroStyles.heroImage}
                   />
