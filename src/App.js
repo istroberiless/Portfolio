@@ -3,12 +3,20 @@ import './styles.css';
 import heroStyles from './components/Hero.module.css';
 import projectStyles from './components/Projects.module.css';
 import aboutStyles from './components/About.module.css';
-import { 
-  Menu, 
-  X, 
-  Github, 
-  Linkedin, 
-  Mail, 
+
+// Import images
+import logoImg from '../public/logo.png';
+import profileImg from '../public/profile.png';
+import campuseatsImg from '../public/campuseats.png';
+import bituinImg from '../public/bituin.png';
+import funImg from '../public/fun.png';
+import locationImg from '../public/location.png';
+import {
+  Menu,
+  X,
+  Github,
+  Linkedin,
+  Mail,
   ExternalLink,
   Code2,
   Palette,
@@ -37,7 +45,7 @@ function App() {
       tech: ["React Native", "Node.js", "MongoDB", "Socket.io", "Firebase"],
       github: "https://github.com/Lraccc/campus_eats",
       live: "#",
-      image: "/campuseats.png",
+      image: `${process.env.PUBLIC_URL}/campuseats.png`,
       type: "collaborative"
     },
     {
@@ -46,7 +54,7 @@ function App() {
       tech: ["React", "Node.js", "Tailwind CSS"],
       github: "https://github.com/ElReyDeLosGorditos/IT342-BituinDestinations",
       live: "#",
-      image: "/bituin.png",
+      image: `${process.env.PUBLIC_URL}/bituin.png`,
       type: "collaborative"
     },
     {
@@ -55,7 +63,7 @@ function App() {
       tech: ["Figma", "Creative Design", "Personal Project", "Artistic Expression"],
       github: "#",
       live: "https://www.figma.com/proto/ym07zHyvstXfZXbaMGeMNS/TTPD?node-id=3-2&p=f&t=04eWs0lGwvkp5DSa-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
-      image: "/fun.png",
+      image: `${process.env.PUBLIC_URL}/fun.png`,
       type: "creative"
     },
     {
@@ -64,7 +72,7 @@ function App() {
       tech: ["Figma", "UX Research", "Prototype Design", "User Testing"],
       github: "#",
       live: "https://www.figma.com/proto/JllVgrUS42gfit94KRrj7e/HCI-Prototype?node-id=129-116&p=f&t=dlF6p2Zg6JumIJRb-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=129%3A116",
-      image: "/location.png",
+      image: `${process.env.PUBLIC_URL}/location.png`,
       type: "collaborative"
     }
   ];
@@ -79,25 +87,25 @@ function App() {
   };
 
   const softSkills = [
-    { 
-      icon: <Lightbulb size={28} />, 
-      name: "Creative Problem Solving", 
-      desc: "Innovative approaches to complex challenges with out-of-the-box thinking" 
+    {
+      icon: <Lightbulb size={28} />,
+      name: "Creative Problem Solving",
+      desc: "Innovative approaches to complex challenges with out-of-the-box thinking"
     },
-    { 
-      icon: <Target size={28} />, 
-      name: "Strategic Planning", 
-      desc: "Long-term vision with attention to detail in project execution" 
+    {
+      icon: <Target size={28} />,
+      name: "Strategic Planning",
+      desc: "Long-term vision with attention to detail in project execution"
     },
-    { 
-      icon: <Users size={28} />, 
-      name: "Team Collaboration", 
-      desc: "Strong communication in cross-functional teams" 
+    {
+      icon: <Users size={28} />,
+      name: "Team Collaboration",
+      desc: "Strong communication in cross-functional teams"
     },
-    { 
-      icon: <Zap size={28} />, 
-      name: "Adaptability", 
-      desc: "Quick learner who thrives in fast-paced, evolving environments" 
+    {
+      icon: <Zap size={28} />,
+      name: "Adaptability",
+      desc: "Quick learner who thrives in fast-paced, evolving environments"
     }
   ];
 
@@ -106,9 +114,9 @@ function App() {
       {/* Floating Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-amber-200/15 to-orange-200/15 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-emerald-200/15 to-teal-200/15 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-40 left-20 w-40 h-40 bg-gradient-to-br from-stone-300/15 to-neutral-300/15 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 right-10 w-28 h-28 bg-gradient-to-br from-warm-gray-200/15 to-stone-200/15 rounded-full blur-xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-emerald-200/15 to-teal-200/15 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-40 left-20 w-40 h-40 bg-gradient-to-br from-stone-300/15 to-neutral-300/15 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-28 h-28 bg-gradient-to-br from-warm-gray-200/15 to-stone-200/15 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
       </div>
 
       {/* Navigation */}
@@ -117,12 +125,12 @@ function App() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
               <img 
-                src="/logo.png" 
+                src={`${process.env.PUBLIC_URL}/logo.png`}
                 alt="KNI Logo" 
                 className="w-8 h-8 object-contain"
               />
             </div>
-            
+
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-300 px-3 py-2">Home</a>
@@ -132,7 +140,7 @@ function App() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden p-2 text-stone-600 hover:text-stone-800"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -165,16 +173,16 @@ function App() {
                   <div className={heroStyles.heroTitleUnderline}></div>
                 </span>
               </h1>
-              
+
               <div className={heroStyles.heroSubtitle}>
                 ✨ UI/UX Designer | QA Tester
               </div>
-              
+
               <p className={heroStyles.heroDescription}>
-                A committed designer and problem-solver who thrives at the intersection of creativity and technology. 
+                A committed designer and problem-solver who thrives at the intersection of creativity and technology.
                 I blend thoughtful design with technical expertise to craft user-centered digital solutions that are both functional and delightful to use.
               </p>
-              
+
               <div className={heroStyles.heroStats}>
                 <div className={heroStyles.heroStatItem}>
                   <div className={`${heroStyles.heroStatNumber} ${heroStyles.amber}`}>3+</div>
@@ -185,7 +193,7 @@ function App() {
                   <div className={heroStyles.heroStatLabel}>Passion Driven</div>
                 </div>
               </div>
-              
+
               <div className={heroStyles.heroButtons}>
                 <a href="#projects" className={heroStyles.heroPrimaryButton}>
                   Explore My Work
@@ -195,7 +203,7 @@ function App() {
                   Let's Connect
                 </a>
               </div>
-              
+
               <div className={heroStyles.heroSocial}>
                 <div className={heroStyles.heroSocialText}>Let's connect mindfully</div>
                 <div className={heroStyles.heroSocialLinks}>
@@ -211,7 +219,7 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className={heroStyles.heroImageSection}>
               <div className={heroStyles.heroImageContainer}>
                 <div className={`${heroStyles.heroImageRing} ${heroStyles.ring1}`}></div>
@@ -220,7 +228,7 @@ function App() {
                 <div className={heroStyles.heroImageBackground}></div>
                 <div className={heroStyles.heroImageWrapper}>
                   <img 
-                    src="/profile.png" 
+                    src={`${process.env.PUBLIC_URL}/profile.png`}
                     alt="Kyle Niña" 
                     className={heroStyles.heroImage}
                   />
@@ -239,18 +247,18 @@ function App() {
             <h2 className={aboutStyles.aboutTitle}>About Me</h2>
             <div className={aboutStyles.aboutUnderline}></div>
           </div>
-          
+
           <div className={aboutStyles.aboutIntro}>
             <div className={aboutStyles.aboutIntroContent}>
               <h3 className={aboutStyles.aboutGreeting}>Hello, I'm Kyle</h3>
               <p className={aboutStyles.aboutDescription}>
                 An enthusiastic UI/UX Designer and QA Tester who has <span className={aboutStyles.aboutHighlight}>3+ years </span>
-                 of learning experience and is motivated by the high level of communication skills and teamwork spirit. 
+                of learning experience and is motivated by the high level of communication skills and teamwork spirit.
                 I thrive in settings where design and technology are perfectly aligned and put my efforts in designing solutions that are purposeful and thoughtful to the actual needs of the users
               </p>
               <p className={aboutStyles.aboutDescription}>
-              I combine innovative design thinking and careful quality assurance measures, where all digital touchpoints will be both beautiful and functional. 
-              In my opinion, innovation, usability, and technical excellence create great products when they are in the right measure.
+                I combine innovative design thinking and careful quality assurance measures, where all digital touchpoints will be both beautiful and functional.
+                In my opinion, innovation, usability, and technical excellence create great products when they are in the right measure.
               </p>
               <div className={aboutStyles.aboutTags}>
                 <span className={`${aboutStyles.aboutTag} ${aboutStyles.mindful}`}>Mindful Creator</span>
@@ -266,7 +274,7 @@ function App() {
                 <h3 className={aboutStyles.aboutSectionTitle}>Core Values</h3>
                 <div className={aboutStyles.aboutSectionUnderline}></div>
               </div>
-              
+
               <div className={aboutStyles.coreValues}>
                 {softSkills.map((skill, index) => (
                   <div key={index} className={aboutStyles.coreValueItem}>
@@ -286,7 +294,7 @@ function App() {
                   <h3 className={aboutStyles.aboutSectionTitle}>Languages</h3>
                   <div className={aboutStyles.aboutSectionUnderline}></div>
                 </div>
-                
+
                 <div className={aboutStyles.languagesList}>
                   <div className={aboutStyles.languageItem}>
                     <span className={aboutStyles.languageName}>English</span>
@@ -294,14 +302,14 @@ function App() {
                       <div className={`${aboutStyles.languageProgress} ${aboutStyles.english}`}></div>
                     </div>
                   </div>
-                  
+
                   <div className={aboutStyles.languageItem}>
                     <span className={aboutStyles.languageName}>Tagalog</span>
                     <div className={aboutStyles.languageBar}>
                       <div className={`${aboutStyles.languageProgress} ${aboutStyles.tagalog}`}></div>
                     </div>
                   </div>
-                  
+
                   <div className={aboutStyles.languageItem}>
                     <span className={aboutStyles.languageName}>Cebuano</span>
                     <div className={aboutStyles.languageBar}>
@@ -317,7 +325,7 @@ function App() {
                 <h3 className={aboutStyles.aboutSectionTitle}>Technical Craft</h3>
                 <div className={aboutStyles.aboutSectionUnderline}></div>
               </div>
-              
+
               <div className={aboutStyles.technicalSkillsList}>
                 {Object.entries(technicalSkills).map(([category, skills], index) => (
                   <div key={index} className={aboutStyles.technicalSkillCategory}>
@@ -332,8 +340,8 @@ function App() {
                     </h4>
                     <div className={aboutStyles.technicalSkillGrid}>
                       {skills.map((skill, skillIndex) => (
-                        <span 
-                          key={skillIndex} 
+                        <span
+                          key={skillIndex}
                           className={aboutStyles.technicalSkillItem}
                         >
                           {skill}
@@ -355,13 +363,13 @@ function App() {
             <h2 className={projectStyles.projectsTitle}>Projects</h2>
             <div className={projectStyles.projectsUnderline}></div>
           </div>
-          
+
           <div className={projectStyles.projectsGrid}>
             {projects.map((project, index) => (
               <div key={index} className={`${projectStyles.projectCard} ${project.type === 'creative' ? projectStyles.special : ''}`}>
                 <div className={projectStyles.projectImageContainer}>
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className={projectStyles.projectImage}
                   />
@@ -370,7 +378,7 @@ function App() {
                 <div className={projectStyles.projectContent}>
                   <h3 className={projectStyles.projectTitle}>{project.title}</h3>
                   <p className={projectStyles.projectDescription}>{project.description}</p>
-                  
+
                   <div className={projectStyles.projectTechList}>
                     {project.tech.map((tech, techIndex) => (
                       <span key={techIndex} className={projectStyles.projectTech}>
@@ -378,16 +386,16 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className={projectStyles.projectLinks}>
-                    <a 
-                      href={project.github} 
+                    <a
+                      href={project.github}
                       className={projectStyles.projectLink}
                     >
                       <Github size={16} />
                     </a>
-                    <a 
-                      href={project.live} 
+                    <a
+                      href={project.live}
                       className={`${projectStyles.projectLink} ${projectStyles.primary}`}
                     >
                       <ExternalLink size={16} />
@@ -401,7 +409,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-stone-100/70 relative overflow-hidden" style={{backgroundColor: '#f7f6f4'}}>
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-stone-100/70 relative overflow-hidden" style={{ backgroundColor: '#f7f6f4' }}>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-8">
           <div className="absolute top-10 left-10 text-6xl text-stone-400/30">✨</div>
@@ -409,15 +417,15 @@ function App() {
           <div className="absolute bottom-20 left-20 text-5xl text-stone-400/30">💫</div>
           <div className="absolute bottom-10 right-10 text-6xl text-stone-400/30">⭐</div>
         </div>
-        
+
         <div className="max-w-5xl mx-auto text-center relative">
-          
+
           <h2 className="text-3xl md:text-4xl font-light text-stone-800 mb-6 tracking-wide">Get in Touch</h2>
           <div className="w-24 h-0.5 bg-gradient-to-r from-amber-400 to-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto mb-16 font-light leading-relaxed">
             Feel free to reach out to me through any of these platforms.
           </p>
-          
+
           <div className="flex justify-center items-center gap-6 lg:gap-8 flex-wrap">
             <a href="mailto:kyle.inion@gmail.com" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300">
               <div className="relative">
@@ -454,7 +462,7 @@ function App() {
                 <span className="text-stone-600 text-xs font-light">Cebu City, Philippines</span>
               </div>
             </div>
-            
+
             <a href="#" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300">
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 group-hover:from-blue-200 group-hover:to-blue-300 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group-hover:shadow-xl">
@@ -466,7 +474,7 @@ function App() {
                 <span className="text-stone-600 text-xs font-light">Connect professionally</span>
               </div>
             </a>
-            
+
             <a href="https://github.com/istroberiless" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300">
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-stone-200 to-stone-300 group-hover:from-stone-300 group-hover:to-stone-400 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group-hover:shadow-xl">
@@ -483,7 +491,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-stone-800 text-white" style={{backgroundColor: '#2c2926'}}>
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-stone-800 text-white" style={{ backgroundColor: '#2c2926' }}>
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-10">
             <div className="text-2xl font-light mb-3">
@@ -491,7 +499,7 @@ function App() {
             </div>
             <p className="text-stone-400 font-light">Mindful Developer • Thoughtful Creator • Purpose-Driven Builder</p>
           </div>
-          
+
           <div className="flex justify-center gap-6 mb-10">
             <a href="https://github.com/istroberiless" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
               <Github size={20} />
@@ -503,7 +511,7 @@ function App() {
               <Mail size={20} />
             </a>
           </div>
-          
+
           <div className="border-t border-stone-700 pt-8">
             <p className="text-stone-400 font-light">&copy; 2025 Kyle Niña Inion. Made with intention. Built with React & Tailwind CSS.</p>
           </div>
@@ -513,4 +521,6 @@ function App() {
   );
 }
 
+
+export default App;
 export default App;
