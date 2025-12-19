@@ -185,8 +185,8 @@ function App() {
 
               <div className={heroStyles.heroStats}>
                 <div className={heroStyles.heroStatItem}>
-                  <div className={`${heroStyles.heroStatNumber} ${heroStyles.amber}`}>3+</div>
-                  <div className={heroStyles.heroStatLabel}>Years Learning</div>
+                  <div className={`${heroStyles.heroStatNumber} ${heroStyles.amber}`}>24/7</div>
+                  <div className={heroStyles.heroStatLabel}>Creative Mind</div>
                 </div>
                 <div className={heroStyles.heroStatItem}>
                   <div className={`${heroStyles.heroStatNumber} ${heroStyles.teal}`}>100%</div>
@@ -207,7 +207,7 @@ function App() {
               <div className={heroStyles.heroSocial}>
                 <div className={heroStyles.heroSocialText}>Let's connect mindfully</div>
                 <div className={heroStyles.heroSocialLinks}>
-                  <a href="https://github.com/istroberiless" className={`${heroStyles.heroSocialLink} ${heroStyles.github}`}>
+                  <a href="https://github.com/istroberiless" className={`${heroStyles.heroSocialLink} ${heroStyles.github}`} target="_blank" rel="noopener noreferrer">
                     <Github size={18} />
                   </a>
                   <a href="#" className={`${heroStyles.heroSocialLink} ${heroStyles.linkedin}`}>
@@ -252,13 +252,18 @@ function App() {
             <div className={aboutStyles.aboutIntroContent}>
               <h3 className={aboutStyles.aboutGreeting}>Hello, I'm Kyle</h3>
               <p className={aboutStyles.aboutDescription}>
-                An enthusiastic UI/UX Designer and QA Tester who has <span className={aboutStyles.aboutHighlight}>3+ years </span>
-                of learning experience and is motivated by the high level of communication skills and teamwork spirit.
-                I thrive in settings where design and technology are perfectly aligned and put my efforts in designing solutions that are purposeful and thoughtful to the actual needs of the users
+                As someone passionate about <span className={aboutStyles.aboutHighlight}>UI/UX design</span>, 
+                I focus on creating thoughtful digital experiences that prioritize user needs. I enjoy the process of turning 
+                complex problems into simple, intuitive solutions through careful research and iterative design.
               </p>
               <p className={aboutStyles.aboutDescription}>
-                I combine innovative design thinking and careful quality assurance measures, where all digital touchpoints will be both beautiful and functional.
-                In my opinion, innovation, usability, and technical excellence create great products when they are in the right measure.
+                My experience in quality assurance has taught me the importance of attention to detail and systematic thinking. 
+                I approach testing with curiosity and thoroughness, ensuring that every interaction meets both functional 
+                requirements and user expectations.
+              </p>
+              <p className={aboutStyles.aboutDescription}>
+                This combination allows me to see projects from both creative and technical perspectives, 
+                bridging the gap between design vision and reliable implementation.
               </p>
               <div className={aboutStyles.aboutTags}>
                 <span className={`${aboutStyles.aboutTag} ${aboutStyles.mindful}`}>Mindful Creator</span>
@@ -391,12 +396,16 @@ function App() {
                     <a
                       href={project.github}
                       className={projectStyles.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Github size={16} />
                     </a>
                     <a
                       href={project.live}
                       className={`${projectStyles.projectLink} ${projectStyles.primary}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <ExternalLink size={16} />
                     </a>
@@ -463,7 +472,7 @@ function App() {
               </div>
             </div>
 
-            <a href="#" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300">
+            <a href="#" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 group-hover:from-blue-200 group-hover:to-blue-300 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group-hover:shadow-xl">
                   <Linkedin size={20} className="text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
@@ -475,7 +484,7 @@ function App() {
               </div>
             </a>
 
-            <a href="https://github.com/istroberiless" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300">
+            <a href="https://github.com/istroberiless" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-stone-200 to-stone-300 group-hover:from-stone-300 group-hover:to-stone-400 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group-hover:shadow-xl">
                   <Github size={20} className="text-stone-600 group-hover:text-stone-700 transition-colors duration-300" />
@@ -501,10 +510,10 @@ function App() {
           </div>
 
           <div className="flex justify-center gap-6 mb-10">
-            <a href="https://github.com/istroberiless" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
+            <a href="https://github.com/istroberiless" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300" target="_blank" rel="noopener noreferrer">
               <Github size={20} />
             </a>
-            <a href="#" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
+            <a href="#" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300" target="_blank" rel="noopener noreferrer">
               <Linkedin size={20} />
             </a>
             <a href="#" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
