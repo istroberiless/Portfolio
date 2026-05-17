@@ -355,7 +355,7 @@
 }
 
 /* Hover effects for sections */
-.aboutSection:hover .aboutSectionUnderline {
+.aboutSection:hover .aboutSecnpm run buildtionUnderline {
   width: 4rem;
   transition: width 0.3s ease;
 }
