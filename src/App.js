@@ -19,12 +19,9 @@ import {
   Mail,
   ExternalLink,
   Code2,
-  Palette,
   Smartphone,
-  Download,
   ArrowRight,
   Database,
-  Cloud,
   Globe,
   Terminal,
   Layers,
@@ -212,10 +209,10 @@ function App() {
                   <a href="https://github.com/istroberiless" className={`${heroStyles.heroSocialLink} ${heroStyles.github}`} target="_blank" rel="noopener noreferrer">
                     <Github size={18} />
                   </a>
-                  <a href="#" className={`${heroStyles.heroSocialLink} ${heroStyles.linkedin}`}>
+                  <a href="https://www.linkedin.com/in/kyle-ni%C3%B1a-inion-6083083a4/" className={`${heroStyles.heroSocialLink} ${heroStyles.linkedin}`}>
                     <Linkedin size={18} />
                   </a>
-                  <a href="#" className={`${heroStyles.heroSocialLink} ${heroStyles.email}`}>
+                  <a href="mailto:kylenina.inion@gmail.com" className={`${heroStyles.heroSocialLink} ${heroStyles.email}`}>
                     <Mail size={18} />
                   </a>
                 </div>
@@ -469,7 +466,7 @@ function App() {
               </div>
             </div>
 
-            <a href="#" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/kyle-ni%C3%B1a-inion-6083083a4/" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 group-hover:from-blue-200 group-hover:to-blue-300 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group-hover:shadow-xl">
                   <Linkedin size={20} className="text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
@@ -481,7 +478,7 @@ function App() {
               </div>
             </a>
 
-            <a href="https://github.com/istroberiress" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/istroberiless" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-stone-200 to-stone-300 group-hover:from-stone-300 group-hover:to-stone-400 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group-hover:shadow-xl">
                   <Github size={20} className="text-stone-600 group-hover:text-stone-700 transition-colors duration-300" />
@@ -510,10 +507,10 @@ function App() {
             <a href="https://github.com/istroberiless" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300" target="_blank" rel="noopener noreferrer">
               <Github size={20} />
             </a>
-            <a href="#" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/kyle-ni%C3%B1a-inion-6083083a4/" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300" target="_blank" rel="noopener noreferrer">
               <Linkedin size={20} />
             </a>
-            <a href="#" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
+            <a href="mailto:kylenina.inion@gmail.com" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
               <Mail size={20} />
             </a>
           </div>
