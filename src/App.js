@@ -5,7 +5,7 @@ import projectStyles from './components/Projects.module.css';
 import aboutStyles from './components/About.module.css';
 
 // Import all images from assets folder
-import profileImg from './assets/profile.png';
+import profileImg from './assets/2x2.jpg';
 import logoImg from './assets/logo.png';
 import campuseatsImg from './assets/campuseats.png';
 import bituinImg from './assets/bituin.png';
@@ -53,7 +53,7 @@ function App() {
       description: "A comprehensive travel planning platform designed through collaborative teamwork to make every journey seamless and inspiring. Provides an intuitive space for travelers to explore, compare, and book unique destinations and experiences.",
       tech: ["React", "Node.js", "Tailwind CSS"],
       github: "https://github.com/ElReyDeLosGorditos/IT342-BituinDestinations",
-      live: "#",
+      live: "https://www.figma.com/proto/DmN5BW5cx8sSg2TPualg2E/BituinDestinations?node-id=0-1&p=f&t=4YROKn0YulwOpm5y-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A6",
       image: bituinImg,
       type: "collaborative"
     },
@@ -124,9 +124,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
-              <img 
+              <img
                 src={logoImg}
-                alt="KNI Logo" 
+                alt="KNI Logo"
                 className="w-8 h-8 object-contain"
               />
             </div>
@@ -136,6 +136,7 @@ function App() {
               <a href="#home" className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-300 px-3 py-2">Home</a>
               <a href="#about" className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-300 px-3 py-2">About</a>
               <a href="#projects" className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-300 px-3 py-2">Projects</a>
+              <a href="#skills" className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-300 px-3 py-2">Skills</a>
               <a href="#contact" className="text-sm font-medium text-stone-600 hover:text-amber-700 transition-colors duration-300 px-3 py-2">Contact</a>
             </div>
 
@@ -155,6 +156,7 @@ function App() {
                 <a href="#home" className="text-sm font-medium text-stone-600 hover:text-amber-700 py-2 transition-colors">Home</a>
                 <a href="#about" className="text-sm font-medium text-stone-600 hover:text-amber-700 py-2 transition-colors">About</a>
                 <a href="#projects" className="text-sm font-medium text-stone-600 hover:text-amber-700 py-2 transition-colors">Projects</a>
+                <a href="#skills" className="text-sm font-medium text-stone-600 hover:text-amber-700 py-2 transition-colors">Skills</a>
                 <a href="#contact" className="text-sm font-medium text-stone-600 hover:text-amber-700 py-2 transition-colors">Contact</a>
               </div>
             </div>
@@ -175,7 +177,7 @@ function App() {
               </h1>
 
               <div className={heroStyles.heroSubtitle}>
-                ✨ UI/UX Designer | QA Tester
+                ✨ UI/UX Designer | Aspiring Team Leader ✨
               </div>
 
               <p className={heroStyles.heroDescription}>
@@ -227,9 +229,9 @@ function App() {
                 <div className={`${heroStyles.heroImageRing} ${heroStyles.ring3}`}></div>
                 <div className={heroStyles.heroImageBackground}></div>
                 <div className={heroStyles.heroImageWrapper}>
-                  <img 
+                  <img
                     src={profileImg}
-                    alt="Kyle Niña" 
+                    alt="Kyle Niña"
                     className={heroStyles.heroImage}
                   />
                   <div className={heroStyles.heroImageOverlay}></div>
@@ -240,7 +242,7 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - intro only */}
       <section id="about" className={aboutStyles.about}>
         <div className={aboutStyles.aboutContainer}>
           <div className={aboutStyles.aboutHeader}>
@@ -252,18 +254,9 @@ function App() {
             <div className={aboutStyles.aboutIntroContent}>
               <h3 className={aboutStyles.aboutGreeting}>Hello, I'm Kyle</h3>
               <p className={aboutStyles.aboutDescription}>
-                As someone passionate about <span className={aboutStyles.aboutHighlight}>UI/UX design</span>, 
-                I focus on creating thoughtful digital experiences that prioritize user needs. I enjoy the process of turning 
+                As someone passionate about <span className={aboutStyles.aboutHighlight}>UI/UX design</span>,
+                I focus on creating thoughtful digital experiences that prioritize user needs. I enjoy the process of turning
                 complex problems into simple, intuitive solutions through careful research and iterative design.
-              </p>
-              <p className={aboutStyles.aboutDescription}>
-                My experience in quality assurance has taught me the importance of attention to detail and systematic thinking. 
-                I approach testing with curiosity and thoroughness, ensuring that every interaction meets both functional 
-                requirements and user expectations.
-              </p>
-              <p className={aboutStyles.aboutDescription}>
-                This combination allows me to see projects from both creative and technical perspectives, 
-                bridging the gap between design vision and reliable implementation.
               </p>
               <div className={aboutStyles.aboutTags}>
                 <span className={`${aboutStyles.aboutTag} ${aboutStyles.mindful}`}>Mindful Creator</span>
@@ -272,7 +265,68 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Projects Section */}
+      <section id="projects" className={projectStyles.projects}>
+        <div className={projectStyles.projectsContainer}>
+          <div className={projectStyles.projectsHeader}>
+            <h2 className={projectStyles.projectsTitle}>Projects</h2>
+            <div className={projectStyles.projectsUnderline}></div>
+          </div>
+
+          <div className={projectStyles.projectsGrid}>
+            {projects.map((project, index) => (
+              <div key={index} className={`${projectStyles.projectCard} ${project.type === 'creative' ? projectStyles.special : ''}`}>
+                <div className={projectStyles.projectImageContainer}>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className={projectStyles.projectImage}
+                  />
+                  <div className={projectStyles.projectImageOverlay}></div>
+                </div>
+                <div className={projectStyles.projectContent}>
+                  <h3 className={projectStyles.projectTitle}>{project.title}</h3>
+                  <p className={projectStyles.projectDescription}>{project.description}</p>
+
+                  <div className={projectStyles.projectTechList}>
+                    {project.tech.map((tech, techIndex) => (
+                      <span key={techIndex} className={projectStyles.projectTech}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className={projectStyles.projectLinks}>
+                    <a
+                      href={project.github}
+                      className={projectStyles.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={16} />
+                    </a>
+                    <a
+                      href={project.live}
+                      className={`${projectStyles.projectLink} ${projectStyles.primary}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={16} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values, Languages & Skills Section */}
+      <section id="skills" className={aboutStyles.about}>
+        <div className={aboutStyles.aboutContainer}>
           <div className={aboutStyles.aboutContent}>
             <div className={aboutStyles.aboutSection}>
               <div className={aboutStyles.aboutSectionHeader}>
@@ -361,62 +415,6 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className={projectStyles.projects}>
-        <div className={projectStyles.projectsContainer}>
-          <div className={projectStyles.projectsHeader}>
-            <h2 className={projectStyles.projectsTitle}>Projects</h2>
-            <div className={projectStyles.projectsUnderline}></div>
-          </div>
-
-          <div className={projectStyles.projectsGrid}>
-            {projects.map((project, index) => (
-              <div key={index} className={`${projectStyles.projectCard} ${project.type === 'creative' ? projectStyles.special : ''}`}>
-                <div className={projectStyles.projectImageContainer}>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className={projectStyles.projectImage}
-                  />
-                  <div className={projectStyles.projectImageOverlay}></div>
-                </div>
-                <div className={projectStyles.projectContent}>
-                  <h3 className={projectStyles.projectTitle}>{project.title}</h3>
-                  <p className={projectStyles.projectDescription}>{project.description}</p>
-
-                  <div className={projectStyles.projectTechList}>
-                    {project.tech.map((tech, techIndex) => (
-                      <span key={techIndex} className={projectStyles.projectTech}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className={projectStyles.projectLinks}>
-                    <a
-                      href={project.github}
-                      className={projectStyles.projectLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github size={16} />
-                    </a>
-                    <a
-                      href={project.live}
-                      className={`${projectStyles.projectLink} ${projectStyles.primary}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-stone-100/70 relative overflow-hidden" style={{ backgroundColor: '#f7f6f4' }}>
         {/* Background Pattern */}
@@ -428,7 +426,6 @@ function App() {
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative">
-
           <h2 className="text-3xl md:text-4xl font-light text-stone-800 mb-6 tracking-wide">Get in Touch</h2>
           <div className="w-24 h-0.5 bg-gradient-to-r from-amber-400 to-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto mb-16 font-light leading-relaxed">
@@ -484,7 +481,7 @@ function App() {
               </div>
             </a>
 
-            <a href="https://github.com/istroberiless" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/istroberiress" className="group flex flex-col items-center gap-3 p-4 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
               <div className="relative">
                 <div className="w-14 h-14 bg-gradient-to-br from-stone-200 to-stone-300 group-hover:from-stone-300 group-hover:to-stone-400 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group-hover:shadow-xl">
                   <Github size={20} className="text-stone-600 group-hover:text-stone-700 transition-colors duration-300" />
