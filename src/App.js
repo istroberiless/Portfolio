@@ -212,7 +212,7 @@ function App() {
                   <a href="https://www.linkedin.com/in/kyle-ni%C3%B1a-inion-6083083a4/" className={`${heroStyles.heroSocialLink} ${heroStyles.linkedin}`}>
                     <Linkedin size={18} />
                   </a>
-                  <a href="mailto:kylenina.inion@gmail.com" className={`${heroStyles.heroSocialLink} ${heroStyles.email}`}>
+                  <a href="mailto:kyle.inion@gmail.com" className={`${heroStyles.heroSocialLink} ${heroStyles.email}`}>
                     <Mail size={18} />
                   </a>
                 </div>
@@ -510,7 +510,7 @@ function App() {
             <a href="https://www.linkedin.com/in/kyle-ni%C3%B1a-inion-6083083a4/" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300" target="_blank" rel="noopener noreferrer">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:kylenina.inion@gmail.com" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
+            <a href="mailto:kyle.inion@gmail.com" className="p-4 bg-stone-700 hover:bg-amber-600 rounded-2xl transition-colors duration-300">
               <Mail size={20} />
             </a>
           </div>
