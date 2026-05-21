@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import heroStyles from './components/Hero.module.css';
 import projectStyles from './components/Projects.module.css';
@@ -14,7 +14,7 @@ import locationImg from './assets/location.png';
 import {
   Menu, X, Github, Linkedin, Mail, ExternalLink, Code2,
   Smartphone, ArrowRight, Database, Globe, Terminal, Layers,
-  Settings, Lightbulb, Target, Users, Zap, ChevronDown
+  Settings, Lightbulb, Target, Users, Zap
 } from 'lucide-react';
 
 // ─── Shared Data ───────────────────────────────────────────────────────────────
