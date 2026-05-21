@@ -102,4 +102,9 @@
   .text-responsive {
     font-size: 1.125rem;
   }
+html {
+  scroll-behavior: smooth;
+}
+
+
 }
