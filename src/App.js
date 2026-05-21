@@ -111,70 +111,87 @@ function SectionHeader({ title }) {
 function Nav({ currentPage, navigate }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLink = (page, label, anchor) => {
-    const isActive = currentPage === page;
-    const handleClick = (e) => {
-      e.preventDefault();
-      setIsMenuOpen(false);
-      if (anchor && currentPage === page) {
-        document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        navigate(page);
-        if (anchor) setTimeout(() => document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' }), 50);
+  const handleNav = (page, anchor) => {
+    setIsMenuOpen(false);
+
+    if (page !== currentPage) {
+      navigate(page);
+      if (anchor) {
+        setTimeout(() => {
+          document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
+        }, 80);
       }
-    };
-    return (
-      <a
-        href="#"
-        onClick={handleClick}
-        className="text-sm font-medium transition-colors duration-300 px-3 py-2"
-        style={{ color: isActive ? '#92400e' : '#57534e', fontWeight: isActive ? '600' : '500' }}
-      >
-        {label}
-      </a>
-    );
+      return;
+    }
+
+    if (anchor) {
+      document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const mobileLink = (page, label) => (
-    <a
-      href="#"
-      onClick={(e) => { e.preventDefault(); navigate(page); setIsMenuOpen(false); }}
-      className="text-sm font-medium py-2 transition-colors"
-      style={{ color: currentPage === page ? '#92400e' : '#57534e' }}
-    >
-      {label}
-    </a>
-  );
+  const NavItem = ({ page, label, anchor }) => {
+    const isActive = currentPage === page;
+
+    return (
+      <button
+        onClick={() => handleNav(page, anchor)}
+        style={{
+          background: 'none',
+          border: 'none',
+          cursor: 'pointer',
+          padding: '8px 12px',
+          fontSize: '14px',
+          fontWeight: isActive ? '600' : '500',
+          color: isActive ? '#92400e' : '#57534e',
+          transition: 'color 0.2s ease'
+        }}
+      >
+        {label}
+      </button>
+    );
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-stone-50/90 backdrop-blur-lg z-50 border-b border-stone-300/30 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('home')}>
-            <img src={logoImg} alt="KNI Logo" className="w-8 h-8 object-contain" />
+
+          {/* Logo */}
+          <div
+            className="flex items-center gap-3 cursor-pointer"
+            onClick={() => handleNav('home', '#home')}
+          >
+            <img src={logoImg} alt="Logo" className="w-8 h-8 object-contain" />
           </div>
-          <div className="hidden md:flex items-center space-x-2">
-            {navLink('home', 'Home', '#home')}
-            {navLink('home', 'About', '#about')}
-            {navLink('projects', 'Projects')}
-            {navLink('creative', 'Creative Works')}
-            {navLink('home', 'Skills', '#skills')}
-            {navLink('home', 'Contact', '#contact')}
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-1">
+            <NavItem page="home" label="Home" anchor="#home" />
+            <NavItem page="home" label="About" anchor="#about" />
+            <NavItem page="projects" label="Projects" />
+            <NavItem page="creative" label="Creative Works" />
+            <NavItem page="home" label="Skills" anchor="#skills" />
+            <NavItem page="home" label="Contact" anchor="#contact" />
           </div>
-          <button className="md:hidden p-2 text-stone-600 hover:text-stone-800" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+
+          {/* Mobile Button */}
+          <button
+            className="md:hidden p-2 text-stone-600"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-stone-200">
-            <div className="flex flex-col space-y-3">
-              {mobileLink('home', 'Home')}
-              {mobileLink('home', 'About')}
-              {mobileLink('projects', 'Projects')}
-              {mobileLink('creative', 'Creative Works')}
-              {mobileLink('home', 'Skills')}
-              {mobileLink('home', 'Contact')}
-            </div>
+          <div className="md:hidden py-4 border-t border-stone-200 flex flex-col gap-2">
+            <NavItem page="home" label="Home" anchor="#home" />
+            <NavItem page="home" label="About" anchor="#about" />
+            <NavItem page="projects" label="Projects" />
+            <NavItem page="creative" label="Creative Works" />
+            <NavItem page="home" label="Skills" anchor="#skills" />
+            <NavItem page="home" label="Contact" anchor="#contact" />
           </div>
         )}
       </div>
