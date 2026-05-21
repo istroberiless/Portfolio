@@ -240,7 +240,7 @@ function HomePage({ navigate }) {
                   <div className={heroStyles.heroTitleUnderline}></div>
                 </span>
               </h1>
-              <div className={heroStyles.heroSubtitle}>✨ UI/UX Designer | Aspiring Team Leader ✨</div>
+              <div className={heroStyles.heroSubtitle}>✨ Creative Designer | Aspiring Team Leader ✨</div>
               <p className={heroStyles.heroDescription}>
                 A committed designer and problem-solver who thrives at the intersection of creativity and technology.
                 I blend thoughtful design with technical expertise to craft user-centered digital solutions that are both functional and delightful to use.
